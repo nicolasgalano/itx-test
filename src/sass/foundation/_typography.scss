@@ -1,0 +1,153 @@
+// *************************************
+//
+//   Typograpghy
+//   -> Basic styles
+//
+// *************************************
+
+// @import 'https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,500,700,300,300i';
+
+
+// -------------------------------------
+//   Body
+// -------------------------------------
+
+body {
+    font: 400 15px/1.5 $font-regular;
+    color: $azul;
+    @include media-breakpoint-up(xl) {
+        font-size: 23px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+
+
+
+// -------------------------------------
+//   Headings
+// -------------------------------------
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    line-height: 1;
+}
+
+h2 {
+    line-height: .95;
+    color: $azul;
+    font-size: 63px;
+    margin-bottom: 50px;
+    @include media-breakpoint-up(xl) {
+        font-size: 95px;
+    }
+    @include media-breakpoint-down(sm) {
+        line-height: 1;
+    }
+    &.intro {
+        line-height: 1.1;
+        font-size: 70px;
+        max-width:580px;
+        width:100%;
+        @include media-breakpoint-down(sm) {
+            font-size:40px;
+            max-width:auto;
+        }
+        .arrow {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background: url(../images/flecha.png) 50% 50% no-repeat;
+            background-size: contain;
+            margin-top: 70px;
+            @include media-breakpoint-up(xl) {
+                height: 58px;
+                width: 58px;
+                margin-top: 100px;
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+
+// -------------------------------------
+//   Paragraph
+// -------------------------------------
+
+p {
+    letter-spacing: 0.03em;
+}
+
+
+
+// -------------------------------------
+//   Sizes
+// -------------------------------------
+
+.font-size-24 {
+    font-size: 24px;
+}
+
+
+
+// -------------------------------------
+//   Styles
+// -------------------------------------
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 1px rgba(0,0,0,.4);
+}
+
+
+
+
+// -------------------------------------
+//  Font weight
+// -------------------------------------
+
+.font-light {
+    font-family: $font-light;
+}
+
+.font-regular {
+    font-family: $font-regular;
+}
+
+.font-medium {
+    font-family: $font-medium;
+}
+
+.font-semibold, strong {
+    font-weight: 400;
+    font-family: $font-semibold;
+}
+
+.font-bold {
+    font-family: $font-bold;
+}
+
+
+
+// -------------------------------------
+//  Letter-spacing
+// -------------------------------------
+
+.letter-spacing {
+    letter-spacing: 0.02em;
+}
+
+.letter-spacing-neg {
+    letter-spacing: -0.02em;
+}
+
+
+
+// -------------------------------------
+//  Font Family
+// -------------------------------------

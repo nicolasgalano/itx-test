@@ -1,0 +1,271 @@
+// *************************************
+//
+//   Navbars: top + left
+//
+// *************************************
+
+
+/* ------- Top nav --------*/
+
+.navbar-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    @include media-breakpoint-down(sm) {
+        background:rgba(253,221,211,0.9) !important;
+    }
+    .white {
+        .facebook {
+            background-image: url(../images/ic_facebook-white.png) !important;
+        }
+        .twitter {
+            background-image: url(../images/ic_twitter-white.png) !important;
+        }
+        .instagram {
+            background-image: url(../images/ic_instagram-white.png) !important;
+        }
+        .mail {
+            background-image: url(../images/ic_mail-white.png) !important;
+        }
+    }
+}
+.taller .navbar-top{
+    @include media-breakpoint-down(sm) {
+        display:none;
+    }
+}
+
+.main-logo {
+    float: left;
+    background: url(../images/logo-pulsion.gif) no-repeat 50% 50%;
+    background-size: contain;
+    width: 150px;
+    margin-top: 0px;
+    margin-left: 96px;
+    transition: $smooth;
+    @include media-breakpoint-up(l) {
+        width: 172px;
+        height: 45px;
+    }
+    @include media-breakpoint-up(xl) {
+        width: 220px;
+        height: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+        margin-left: 16px;
+        margin-top:2px;
+        margin-bottom:3px;
+        display:block !important;
+        opacity:1 !important;
+    }
+}
+
+.mobile-btn {
+    display:none;
+    @include media-breakpoint-down(sm) {
+        display:block;
+        float: right;
+        background: url(../images/menu.png) no-repeat 50% 50%;
+        background-size: contain;
+        width: 26px;
+        height: 18px;
+        margin-top: 16px;
+        margin-right: 25px;
+        transition: $smooth;
+    }
+}
+
+.main-iso {
+    display: none;
+    background: url(../images/logo-pulsion-s.gif) 50% 50% no-repeat $azul;
+    background-size: 65%;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include media-breakpoint-down(sm) {
+        display:none !important;
+    }
+}
+
+
+.social-links {
+    &-list {
+        float: right;
+        margin-right: 75px;
+        margin-top: 7px;
+        @include media-breakpoint-down(sm) {
+            display:none;
+        }
+    }
+
+    &-item {
+        width: 26px;
+        height: 26px;
+        position: relative;
+        display: inline-block;
+    }
+
+    &-link {
+        @include block-link();
+        //background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        &.facebook {
+            background-image: url(../images/ic_facebook.png);
+        }
+        &.twitter {
+            background-image: url(../images/ic_twitter.png);
+        }
+        &.instagram {
+            background-image: url(../images/ic_instagram.png);
+        }
+        &.mail {
+            background-image: url(../images/ic_mail.png);
+        }
+    }
+}
+
+
+
+/* ------- Left nav --------*/
+.left-nav{
+    @include media-breakpoint-down(sm) {
+        display:none;
+    }
+}
+
+.navbar-left {
+    position: fixed;
+    height: calc(100vh - 12%);
+    height: -webkit-calc(100vh - 12%);
+    width: 40px;
+    top: 18%;
+    left: 0;
+    z-index: 100;
+    transition: $smooth;
+    pointer-events: none;
+    @include media-breakpoint-up(xl) {
+    }
+    &.shadow {
+        box-shadow: 0 0 40px #fdddd3;
+    }
+    &-item {
+        transform: rotate(-90deg);
+        transform-origin: top right;
+        height: 20%;
+        font-size: 10px;
+        text-align: center;
+        line-height: 45px;
+        white-space: nowrap;
+        @include media-breakpoint-up(sm) {
+            font-size: 10px;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 10px;
+        }
+        @include media-breakpoint-up(l) {
+            font-size: 10px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 14px;
+        }
+    }
+    &-link {
+        @include block-link();
+        height: 40px;
+        width: 90px;
+        top: -43px;
+        color: $azul !important;
+        text-decoration: none !important;
+        pointer-events: auto !important;
+        span {
+            opacity: 0;
+        }
+        &.active {
+            span {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.mobile-nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    background:$azul;
+    min-height:100vh;
+    .close{
+        position: absolute;
+        opacity: 1;
+        right: 28px;
+        top: 19px;
+        color: #fff;
+        z-index: 100;
+        background: url(../images/close.png) no-repeat 50% 50%;
+        background-size: contain;
+        height: 37px;
+        width: 28px;
+    }
+    .main-logo{
+        margin-top:22px;
+        margin-left:28px;
+        background:url(../images/logo-pulsion.png) no-repeat;
+    }
+    .social-links{
+        &-list{
+            display:block;
+            float:none;
+            text-align:center;
+            width:100%;
+            margin-top:20px;
+        }
+        &-item{
+            padding:0 30px;
+        }
+        &-link {
+            @include block-link();
+            //background-size: contain;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            &.facebook {
+                background-image: url(../images/ic_facebook-white-big.png);
+            }
+            &.twitter {
+                background-image: url(../images/ic_twitter-white-big.png);
+            }
+            &.instagram {
+                background-image: url(../images/ic_instagram-white-big.png);
+            }
+            &.mail {
+                background-image: url(../images/ic_mail-white-big.png);
+            }
+        }
+    }
+}
+.navbar-center {
+    padding-top: 100px;
+    transition: $smooth;
+    pointer-events: none;
+    &-item {
+        font-size: 20px;
+        text-align: center;
+        line-height: 45px;
+        white-space: nowrap;
+        padding-bottom:16px;
+    }
+    &-link {
+        height: 40px;
+        width: 90px;
+        color: $white !important;
+        text-decoration: none !important;
+        pointer-events: auto !important;
+    }
+}

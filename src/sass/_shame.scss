@@ -1,0 +1,102 @@
+// *************************************
+//
+//   SHAME
+//   -> Put here any other styles
+//   -> that should be reviewed or relocated!!
+//
+// *************************************
+
+
+
+// -------------------------------------
+//   ...
+// -------------------------------------
+
+body{
+    background:#282828;
+}
+
+.container-fluid{
+    width:452px;
+    height:451px;
+}
+
+.ic-climate{
+    fill: $weather-icon;
+    &--selected{
+        fill: $yellow;
+    }
+}
+.module-top{
+    height:83px;
+    background:#323a45;
+    border-bottom:1px solid #676c72;
+    h2{
+        position: relative;
+        color:$white;
+        font-family: 'Arial';
+        font-weight: bold;
+        font-size:29px;
+        line-height:82px;
+        letter-spacing: 1px;
+        text-align: center;
+        .ic-climate{
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+        }
+    }
+}
+.module-info{
+    background:#FFF;
+
+    .icon{
+        height:230px;
+        position: relative;
+        img{
+            height:250px;
+            position:absolute;
+            top:6px;
+            right:-40px;
+        }
+    }
+
+    .weather-data{
+        padding-top:70px;
+        span{
+            color:#dce1e7;
+            font-family: 'Arial';
+            font-weight: bold;
+        }
+        .temp-high{
+            display: block;
+            font-size:65px;
+            line-height:65px;
+        }
+        .temp-low{
+            display: block;
+            font-size:35px;
+            line-height:35px;
+            padding-left:10px;
+        }
+    }
+}
+.module-days{
+    border-top:1px solid $grey;
+    .days-col{
+        &:nth-child(even){
+            border-right:1px solid $grey;
+            border-left:1px solid $grey;
+        }
+        background:$white;
+        .ic-climate{
+            display:block;
+        }
+        span{
+
+        }
+    }
+}
+
+// ----- ... ----- //

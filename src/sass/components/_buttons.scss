@@ -1,0 +1,29 @@
+// *************************************
+//
+//   Buttons styles
+//
+// *************************************
+
+.btn, button {
+    color: $azul;
+    border: 1px solid $azul;
+    border-radius: 0;
+    transition: $smooth;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    @include media-breakpoint-up(xl) {
+        font-size: 20px;
+    }
+    &:hover {
+        color: $white;
+        background-color: $azul;
+    }
+    &--inverted {
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $azul !important;
+        }
+    }
+}

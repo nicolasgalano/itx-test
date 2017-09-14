@@ -1,0 +1,70 @@
+// *************************************
+//
+//   Base
+//   -> Tag-Level Settings
+//
+// *************************************
+
+
+.wrap {
+    left: 0;
+    top: 0;
+    transition: $smooth-slow;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &.abrir-taller {
+        left: -100%;
+        @include media-breakpoint-up(md) {}
+        .main-logo {
+            display: none !important;
+        }
+        .main-iso {
+            display: block !important;
+        }
+        @include media-breakpoint-down(sm) {
+            left:0;
+            height:auto;
+            width:auto;
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+
+// -------------------------------------
+//   Reset list style
+// -------------------------------------
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// -------------------------------------
+//   Remove marquee from links :focus
+// -------------------------------------
+
+a, a:focus, input, input:focus {
+    outline: none;
+}
+
+a:focus {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+// -------------------------------------
+//   Placeholder hide
+// -------------------------------------
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }

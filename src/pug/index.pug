@@ -1,0 +1,33 @@
+include partials/head
+
+body
+    
+    .container-fluid
+        
+        .module-top
+            h2
+                img.ic-climate(src="images/Cloud-Sun.svg")
+                | Local Weather
+        
+        .module-info.row
+            
+            .icon.col-sm-6
+                img.ic-climate--selected(src="images/Cloud-Sun.svg")
+            
+            .weather-data.col-sm-6
+                span.temp-high 68º
+                span.temp-low /57º
+        
+        .module-days.row
+            
+            .days-col.col-sm-4
+                img.ic-climate(src="images/Cloud-Sun.svg")
+                span SUN
+            .days-col.col-sm-4
+                img.ic-climate(src="images/Sun.svg")
+                span MON
+            .days-col.col-sm-4
+                img.ic-climate(src="images/Sun.svg")
+                span TUE
+
+include partials/footer
